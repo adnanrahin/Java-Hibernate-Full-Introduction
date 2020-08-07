@@ -14,7 +14,7 @@ public class Main {
         Session session = factory.getCurrentSession();
 
         try {
-            Student student = new Student("Optimus", "Prime", "optimusprime@email.com");
+            Student student = new Student("bera", "lagse", "beralagse@email.com");
             session.beginTransaction();
             session.save(student);
             session.getTransaction().commit();
