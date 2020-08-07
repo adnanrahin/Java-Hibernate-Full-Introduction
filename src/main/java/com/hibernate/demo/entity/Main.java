@@ -11,19 +11,15 @@ public class Main {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
-
         Session session = factory.getCurrentSession();
 
         try {
-            Student student = new Student("Megatron", "Wall", "megatron@email.com");
+            Student student = new Student("Optimus", "Prime", "optimusprime@email.com");
             session.beginTransaction();
             session.save(student);
             session.getTransaction().commit();
         } finally {
             factory.close();
         }
-
     }
-
-
 }
