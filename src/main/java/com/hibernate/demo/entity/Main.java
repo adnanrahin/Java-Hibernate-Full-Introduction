@@ -14,9 +14,14 @@ public class Main {
         Session session = factory.getCurrentSession();
 
         try {
-            Student student = new Student("bera", "lagse", "beralagse@email.com");
+            Student student1 = new Student("vector", "prime", "vectorprime@email.com");
+            Student student2 = new Student("iron", "hide", "ironhidee@email.com");
+
             session.beginTransaction();
-            session.save(student);
+
+            session.save(student1);
+            session.save(student2);
+
             session.getTransaction().commit();
         } finally {
             factory.close();
