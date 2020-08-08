@@ -1,4 +1,4 @@
-package com.hibernate.demo.entity;
+package com.hibernate.demo.entity.create.object;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,8 +14,8 @@ public class Main {
         Session session = factory.getCurrentSession();
 
         try {
-            Student student1 = new Student("vector", "prime", "vectorprime@email.com");
-            Student student2 = new Student("iron", "hide", "ironhidee@email.com");
+            Student student1 = new Student("optimus", "prime", "optimusprime@email.com");
+            Student student2 = new Student("megatron", "beast", "megatron@email.com");
 
             session.beginTransaction();
 

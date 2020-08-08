@@ -1,4 +1,4 @@
-package com.hibernate.demo.entity;
+package com.hibernate.demo.entity.create.object;
 
 import javax.persistence.*;
 
