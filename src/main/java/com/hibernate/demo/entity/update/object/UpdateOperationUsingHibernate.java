@@ -10,7 +10,9 @@ public class UpdateOperationUsingHibernate {
 
     public static void main(String[] args) {
 
-        SessionFactory sessionFactory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
+        SessionFactory sessionFactory = new Configuration().
+                configure("hibernate.cfg.xml").
+                addAnnotatedClass(Student.class).buildSessionFactory();
 
         try {
 
