@@ -1,5 +1,4 @@
-package com.hibernate.demo.entity.read.object;
-
+package com.hibernate.demo.entity.read.object.usingquery;
 
 import javax.persistence.*;
 
@@ -8,8 +7,8 @@ import javax.persistence.*;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "first_name")
@@ -21,8 +20,7 @@ public class Student {
     @Column(name = "email")
     private String email;
 
-    public Student() {
-    }
+    public Student(){}
 
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
