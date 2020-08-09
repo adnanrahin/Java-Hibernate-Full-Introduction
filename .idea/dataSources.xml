@@ -17,5 +17,11 @@ C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/mai
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="@localhost [2]" uuid="6315389d-61d3-4c40-9d87-bd3e262c3c95">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+    </data-source>
   </component>
 </project>
