@@ -14,9 +14,9 @@ public class SaveInstructorInDataBase {
         try {
             session.beginTransaction();
 
-            Instructor instructor = new Instructor("Megatron", "NLN", "megatron@email.com");
+            Instructor instructor = new Instructor("Vector", "Prime", "vectorprime@email.com");
 
-            InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com/ironhide", "Long Drive");
+            InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com/vectorprime", "Eating");
 
             instructor.setInstructorDetail(instructorDetail);
 
