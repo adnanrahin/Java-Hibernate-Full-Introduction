@@ -23,5 +23,15 @@ C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/mai
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate1.cfg.xml/Hibernate" uuid="15499895-30f6-4627-9df9-4b18e7990c5e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate1.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
   </component>
 </project>
