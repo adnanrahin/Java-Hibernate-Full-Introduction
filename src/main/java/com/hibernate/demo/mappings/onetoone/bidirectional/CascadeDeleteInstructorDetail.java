@@ -18,9 +18,13 @@ public class CascadeDeleteInstructorDetail {
         try {
             session.beginTransaction();
 
-            int theId = 4;
+            int theId = 7;
 
             InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+
+
+            // we need break the bi-directional link to actually delete the instructorDetail only
+            instructorDetail.getInstructor().setInstructorDetail(null);
 
             session.delete(instructorDetail);
 
