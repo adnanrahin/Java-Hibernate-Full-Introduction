@@ -18,7 +18,8 @@ public class InsertInstructorIntoDataBase {
 
             Instructor instructor = new Instructor("Rodimus", "Prime", "rodimusprime@email.com");
 
-            InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com/rodimusprime", "Being Dick");
+            InstructorDetail instructorDetail = new
+                    InstructorDetail("http://www.youtube.com/rodimusprime", "Being Dick");
 
             instructor.setInstructorDetail(instructorDetail);
 
