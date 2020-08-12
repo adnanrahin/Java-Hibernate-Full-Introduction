@@ -4,12 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-
-public class RetrieveInstructorFromDataBase {
+public class CascadeInsertIntoInstruction {
 
     public static void main(String[] args) {
+
         SessionFactory sessionFactory = new Configuration().configure("hibernate1.cfg.xml").addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class).buildSessionFactory();
 
@@ -18,20 +16,23 @@ public class RetrieveInstructorFromDataBase {
         try {
             session.beginTransaction();
 
-            int theId = 5;
+            Instructor instructor = new Instructor("Ultra", "Magnus", "ultramagnus@email.com");
 
-            InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+            InstructorDetail instructorDetail = new InstructorDetail("http://wwww.youtube.com/ultramagnus", "Sleeping");
 
-            System.out.println(instructorDetail.getInstructor());
+            instructor.setInstructorDetail(instructorDetail);
+
+            session.save(instructor);
 
             session.getTransaction().commit();
 
         } catch (Exception e) {
+            session.close();
             e.printStackTrace();
         } finally {
-            session.close();
             sessionFactory.close();
         }
 
     }
+
 }
