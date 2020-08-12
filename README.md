@@ -43,6 +43,9 @@ The session object is used to save and retrieve objects.
 A session object is a Short-Lived object. 
 
 # Hibernate Annotations
+#### Table: @Table (name = “table_name”)
+#### Column: @Column(name = “column_name”)
+#### Id: @Id (mapped to primary key)
 #### ID Generation Strategies: @GeneratedValue(strategy = “stratigie_name”)
 1. GenerationType.AUTO: Pick an appropriate strategy for the particular database.
 2. GenerationType.IDENTITY: Assign Primary Keys using the database identity column.
@@ -56,12 +59,12 @@ Java Persistence API provides Java developers with an object/relational mapping 
 # Entities:
 An entity is a lightweight persistence domain object. Typical, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table. 
 # Requirements for the Entity Class: 
-The class must be annotated with Entity annotation.
-The class must have a public or protected, no-argument constructor.
-The class must not be declared final. 
-If an entity instance is passed by value as a detached object, such as through a session bean’s remote business interface, the class must implement the Serializable interface. 
-Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.
-Persistent instance variables must be declared private, protected, or package-private and can be accessed directly only by the entity class’s methods. Clients must access the entity’s state through accessor or business methods. 
+1. The class must be annotated with Entity annotation.
+2. The class must have a public or protected, no-argument constructor.
+3. The class must not be declared final. 
+4. If an entity instance is passed by value as a detached object, such as through a session bean’s remote business interface, the class must implement the Serializable interface. 
+5. Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.
+6. Persistent instance variables must be declared private, protected, or package-private and can be accessed directly only by the entity class’s methods. Clients must access the entity’s state through accessor or business methods. 
 
 # Hibernate Mappings: 
 Hibernate Mappings are one of the key features of Hibernate. They establish the relationship between two database tables as attributes in models. We can be established either unidirectional or bidirectional relationships. The relationship that can be established between entities are:
@@ -69,3 +72,31 @@ Hibernate Mappings are one of the key features of Hibernate. They establish the 
 2. @OneToMany - it represents the one to many relationships between two tables/Entities.
 3. @ManyToOne - it represents the many to one relationship between two tables/Entities.
 4. @ManyToMany - it represents the many to many relationships between two tables/Entities. 
+
+# Entity Lifecycle:
+#### Detach: 
+if the entity is detached, it’s not associated with a Hibernate session.
+#### Merge: 
+If the instance is detached from the session, then the merge will reattach to the session.
+#### Persist: 
+Transitions new instances to the managed state. Next Flush/commit will save in databases.
+####Remove: 
+Transitions managed entity to be removed, Next Flush/Commit will delete from databases.
+####Refresh: 
+Reload/synch object with data from the database. Prevents stale data.
+
+# Persistent Objects: 
+Persistent objects are instances of POJO (Plain Old Java Object) classes that are created to represent rows in the table in the database.
+
+#### Persist: 
+If an entity is persisted/saved, the related entity will also be persisted
+#### Remove: 
+If an entity is removed/deleted, the related entity will also be deleted. 
+#### Refresh: 
+If the entity is refreshed, a related entity will also be refreshed. 
+#### Detach: 
+If the entity is detached then the related entity will also be detached. 
+#### Merge: 
+If an entity is merged, then the related entity will also be merged. 
+#### All: 
+All of the above cascade types. 
