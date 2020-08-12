@@ -1,10 +1,10 @@
-package com.hibernate.demo.mappings.onetoone.bidirectional;
+package com.hibernate.demo.mappings.OneToOne.unidirectional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CascadeInsertIntoInstruction {
+public class UpdateEntity {
 
     public static void main(String[] args) {
 
@@ -16,19 +16,16 @@ public class CascadeInsertIntoInstruction {
         try {
             session.beginTransaction();
 
-            Instructor instructor = new Instructor("Ultra", "Magnus", "ultramagnus@email.com");
+            Instructor instructor = session.get(Instructor.class, 3);
 
-            InstructorDetail instructorDetail = new InstructorDetail("http://wwww.youtube.com/ultramagnus", "Sleeping");
+            System.out.println(instructor);
+
+            InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com/megatron", "Flying");
 
             instructor.setInstructorDetail(instructorDetail);
 
-            session.save(instructor);
-
             session.getTransaction().commit();
 
-        } catch (Exception e) {
-            session.close();
-            e.printStackTrace();
         } finally {
             sessionFactory.close();
         }

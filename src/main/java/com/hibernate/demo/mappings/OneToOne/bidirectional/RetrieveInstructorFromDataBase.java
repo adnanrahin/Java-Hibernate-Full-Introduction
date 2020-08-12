@@ -1,13 +1,12 @@
-package com.hibernate.demo.mappings.onetoone.unidirectional;
+package com.hibernate.demo.mappings.OneToOne.bidirectional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class UpdateEntity {
+public class RetrieveInstructorFromDataBase {
 
     public static void main(String[] args) {
-
         SessionFactory sessionFactory = new Configuration().configure("hibernate1.cfg.xml").addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class).buildSessionFactory();
 
@@ -16,20 +15,20 @@ public class UpdateEntity {
         try {
             session.beginTransaction();
 
-            Instructor instructor = session.get(Instructor.class, 3);
+            int theId = 5;
 
-            System.out.println(instructor);
+            InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
 
-            InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com/megatron", "Flying");
-
-            instructor.setInstructorDetail(instructorDetail);
+            System.out.println(instructorDetail.getInstructor());
 
             session.getTransaction().commit();
 
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
+            session.close();
             sessionFactory.close();
         }
 
     }
-
 }

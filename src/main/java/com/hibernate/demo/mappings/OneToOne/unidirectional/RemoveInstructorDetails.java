@@ -1,15 +1,13 @@
-package com.hibernate.demo.mappings.onetoone.bidirectional;
+package com.hibernate.demo.mappings.OneToOne.unidirectional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-
-public class RetrieveInstructorFromDataBase {
+public class RemoveInstructorDetails {
 
     public static void main(String[] args) {
+
         SessionFactory sessionFactory = new Configuration().configure("hibernate1.cfg.xml").addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class).buildSessionFactory();
 
@@ -18,20 +16,18 @@ public class RetrieveInstructorFromDataBase {
         try {
             session.beginTransaction();
 
-            int theId = 5;
+            int instructorDetailId = 3;
 
-            InstructorDetail instructorDetail = session.get(InstructorDetail.class, theId);
+            InstructorDetail instructorDetail = session.get(InstructorDetail.class, instructorDetailId);
 
-            System.out.println(instructorDetail.getInstructor());
+            session.delete(instructorDetail);
 
             session.getTransaction().commit();
 
-        } catch (Exception e) {
-            e.printStackTrace();
         } finally {
-            session.close();
             sessionFactory.close();
         }
 
     }
+
 }

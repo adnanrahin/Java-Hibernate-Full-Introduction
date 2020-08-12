@@ -1,12 +1,10 @@
-package com.hibernate.demo.mappings.onetoone.unidirectional;
+package com.hibernate.demo.mappings.OneToOne.bidirectional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
-public class RemoveInstructorDetails {
+public class CascadeInsertIntoInstruction {
 
     public static void main(String[] args) {
 
@@ -18,14 +16,19 @@ public class RemoveInstructorDetails {
         try {
             session.beginTransaction();
 
-            int instructorDetailId = 3;
+            Instructor instructor = new Instructor("Ultra", "Magnus", "ultramagnus@email.com");
 
-            InstructorDetail instructorDetail = session.get(InstructorDetail.class, instructorDetailId);
+            InstructorDetail instructorDetail = new InstructorDetail("http://wwww.youtube.com/ultramagnus", "Sleeping");
 
-            session.delete(instructorDetail);
+            instructor.setInstructorDetail(instructorDetail);
+
+            session.save(instructor);
 
             session.getTransaction().commit();
 
+        } catch (Exception e) {
+            session.close();
+            e.printStackTrace();
         } finally {
             sessionFactory.close();
         }

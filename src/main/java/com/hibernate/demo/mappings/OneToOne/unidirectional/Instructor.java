@@ -1,4 +1,4 @@
-package com.hibernate.demo.mappings.onetoone.unidirectional;
+package com.hibernate.demo.mappings.OneToOne.unidirectional;
 
 import javax.persistence.*;
 
