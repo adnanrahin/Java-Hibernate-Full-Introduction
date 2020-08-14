@@ -1,37 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="94d8228e-4def-4df9-9eb2-fc96290d15da">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="4ff72bb3-5053-4383-9741-013f1fb1f4e9">
+    <data-source source="LOCAL" name="hibernate2.cfg.xml/Hibernate" uuid="087d8fa3-c5a0-4ba3-8eeb-dd99fbaeccf4">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>Hibernate
 
-C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate.cfg.xml</remarks>
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate2.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="@localhost [2]" uuid="6315389d-61d3-4c40-9d87-bd3e262c3c95">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="hibernate1.cfg.xml/Hibernate" uuid="15499895-30f6-4627-9df9-4b18e7990c5e">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate1.cfg.xml</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-03-one-to-many?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
     </data-source>
   </component>
 </project>
