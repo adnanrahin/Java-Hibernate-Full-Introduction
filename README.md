@@ -100,3 +100,14 @@ If the entity is detached then the related entity will also be detached.
 If an entity is merged, then the related entity will also be merged. 
 #### All: 
 All of the above cascade types. 
+
+# Hibernate Fetch Type
+When we fetch data, should we fetch or retrieve everything. 
+#### Eager Loading: Will retrieve everything.
+#### Lazy Loading: Lazy loading retrieve on request. 
+
+# Eager Loading: 
+Eager Loading will load all dependent entities. If in the database there are lots of dependent entities. It can really slow down the running time performance in Application. Or even won’t able load all the data in runtime memory. 
+
+# Lazy Loading: 
+Lazy loading is the industry standard. It is the best practice in the industry. Lazy loading will only the main entity first. And it will load dependencies on demand. 
