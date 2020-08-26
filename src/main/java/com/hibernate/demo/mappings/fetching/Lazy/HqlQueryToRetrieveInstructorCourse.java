@@ -18,6 +18,14 @@ public class HqlQueryToRetrieveInstructorCourse {
 
         try {
 
+            /*
+            *
+            * In Hibernate LazyLoading does not allow to retrieve data after the session object is closed,
+            * in a situation we can use Hibernate query to retrieve the data,
+            * Hibernate Query Allow us to retrieve the data even after closing the session.
+            *
+            * */
+
             session.beginTransaction();
 
             int theId = 1;
