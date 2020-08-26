@@ -1,4 +1,4 @@
-package com.hibernate.demo.mappings.fetching.eager;
+package com.hibernate.demo.mappings.fetching.Lazy;
 
 import javax.persistence.*;
 
