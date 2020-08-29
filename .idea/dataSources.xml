@@ -7,5 +7,45 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate1.cfg.xml/Hibernate" uuid="35baa3ff-ea28-481e-bc90-9e4eff5cb304">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate1.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="2e2f9f69-5f70-48eb-9e36-1edf016d8efc">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate4.cfg.xml/Hibernate" uuid="676e0f81-4169-4249-92f7-dcbdc8830a70">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate4.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-04-one-to-many-uni?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate2.cfg.xml/Hibernate" uuid="01b144f1-8967-4183-a3fc-69d74101d57b">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/rahin/source-code/IdeaProjects/Java-Hibernate-Full-Introduction/src/main/resources/hibernate2.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-03-one-to-many?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
   </component>
 </project>
