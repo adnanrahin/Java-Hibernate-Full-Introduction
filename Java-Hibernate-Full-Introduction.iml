@@ -7,11 +7,13 @@
           <unit-entry name="hibernate.cfg.xml" value="4ff72bb3-5053-4383-9741-013f1fb1f4e9" />
           <unit-entry name="hibernate1.cfg.xml" value="15499895-30f6-4627-9df9-4b18e7990c5e" />
           <unit-entry name="hibernate2.cfg.xml" value="087d8fa3-c5a0-4ba3-8eeb-dd99fbaeccf4" />
+          <unit-entry name="hibernate4.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate1.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate2.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate4.cfg.xml" />
       </configuration>
     </facet>
   </component>
