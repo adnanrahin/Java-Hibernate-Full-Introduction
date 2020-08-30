@@ -1,5 +1,3 @@
-package com.hibernate.demo.mappings.OneToMany.Unidirectional;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -9,7 +7,7 @@ public class ConnectionManagerTest {
 
         try {
 
-            String url = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false";
+            String url = "jdbc:mysql://localhost:3306/hb-04-one-to-many-uni?useSSL=false";
             String userName = "hbstudent";
             String password = "hbstudent";
 
