@@ -1,6 +1,8 @@
 package com.hibernate.demo.advance.mappings.uniderctional.oneToMany;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "course")
@@ -18,8 +20,20 @@ public class Course {
     @JoinColumn(name = "instructor_id")
     private Instructor instructor;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "course_id")
+    private List<Review> reviews;
+
     public Course() {
 
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public Course(String title) {
@@ -57,4 +71,12 @@ public class Course {
                 ", title='" + title + '\'' +
                 '}';
     }
+
+    public void add(Review review) {
+        if (reviews == null)
+            reviews = new ArrayList<>();
+        reviews.add(review);
+    }
+
+
 }
